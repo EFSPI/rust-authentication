@@ -9,3 +9,11 @@ actix-session = "0.7"      # Pour gérer les sessions
 jsonwebtoken = "8"         # Pour travailler avec JWT
 dotenv = "0.15"            # Pour charger les variables d'environnement
 serde = { version = "1.0", features = ["derive"] } # Pour (de)sérialiser des données
+serde_json = "1.0.133"
+
+[dependencies.uuid]
+version = "1.11.0"
+features = [
+    "v4",
+    "fast-rng",
+]
