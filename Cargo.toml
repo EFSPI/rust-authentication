@@ -1,0 +1,11 @@
+[package]
+name = "rust-authentication"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"            # Pour créer un serveur web
+actix-session = "0.7"      # Pour gérer les sessions
+jsonwebtoken = "8"         # Pour travailler avec JWT
+dotenv = "0.15"            # Pour charger les variables d'environnement
+serde = { version = "1.0", features = ["derive"] } # Pour (de)sérialiser des données
