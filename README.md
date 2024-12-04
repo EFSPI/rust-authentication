@@ -29,7 +29,7 @@ Dependencies not explicitly covered in the installation process; e.g., OS restri
 - Cargo
 - Rust 
  
-Both of them are obtainable via ![rustup](https://rustup.rs/).
+Both of them are obtainable via [rustup](https://rustup.rs/).
 
 ### Usage
 
