@@ -68,8 +68,8 @@ pub async fn generate_token() -> HttpResponse {
     }
 }
 
-//#[cfg(test)]
-//mod tests {
+// #[cfg(test)]
+// mod tests {
 //    use super::*;
 //    use actix_web::{test, App};
 //    use actix_web::http::StatusCode;
@@ -112,4 +112,4 @@ pub async fn generate_token() -> HttpResponse {
 //        let claims = validate_jwt(&token, secret).unwrap();
 //        assert_eq!(claims.sub, "user123");
 //    }
-//}
+// }
