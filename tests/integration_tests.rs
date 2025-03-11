@@ -1,5 +1,5 @@
 use rust_authentication::handlers::*;
-use actix_web::{test, App};
+use actix_web::{web, test, App};
 use serde_json::json;
 
 #[cfg(test)]
@@ -28,6 +28,7 @@ mod tests {
         assert_eq!(resp.status(), actix_web::http::StatusCode::CREATED);
     }
 
+    #[actix_web::test]
     async fn test_login_user() {
 
         let app = test::init_service(

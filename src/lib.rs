@@ -1,14 +1,15 @@
-mod jwt_routes;
-mod db;
-mod schema;
-mod handlers;
-mod auth;
-mod models;
+pub mod jwt_routes;
+pub mod db;
+pub mod schema;
+pub mod handlers;
+pub mod auth;
+pub mod models;
 
 use actix_web::{web, App, HttpServer, HttpResponse};
 use dotenvy::dotenv;
 use std::env;
 use jwt_routes::{generate_token, validate_token};
+use handlers::{register_user, login_user};
 
 pub async fn run_server() -> std::io::Result<()> {
     dotenv().ok();
@@ -22,8 +23,8 @@ pub async fn run_server() -> std::io::Result<()> {
         App::new()
             .app_data(web::Data::new(pool.clone()))
             .route("/", web::get().to(|| async { HttpResponse::Ok().body("Hello, Rust!") }))
-            .route("/register", web::post().to(handlers::register_user))
-            .route("/login", web::post().to(handlers::login_user))
+            .route("/register", web::post().to(register_user))
+            .route("/login", web::post().to(login_user))
             .route("/generate", web::get().to(generate_token))
             .route("/validate/{token}", web::get().to(validate_token))
     })
