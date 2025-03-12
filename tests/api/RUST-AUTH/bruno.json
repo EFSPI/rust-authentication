@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "RUST-AUTH",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
