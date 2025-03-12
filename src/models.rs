@@ -10,7 +10,7 @@ pub struct User {
     pub password_hash: String,
 }
 
-#[derive(Insertable, Deserialize)]
+#[derive(Insertable, Deserialize, Debug)]
 #[diesel(table_name = crate::schema::users)]
 pub struct NewUser {
     pub username: String,

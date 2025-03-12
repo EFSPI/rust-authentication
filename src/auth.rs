@@ -50,11 +50,6 @@ pub fn validate_jwt(token: &str, secret: &str) -> Result<Claims, Error> {
     .map(|data| data.claims)
 }
 
-/// TODO: Réparer cette fonction pour utiliser une db, quitte à faire du sqlite3
-pub fn validate_refresh_token(refresh_token: &str) -> bool {
-    !refresh_token.is_empty()
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;

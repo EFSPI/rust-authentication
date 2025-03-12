@@ -1,9 +1,10 @@
-mod jwt_routes;
-mod db;
-mod schema;
-mod handlers;
-mod auth;
-mod models;
+pub mod jwt_routes;
+pub mod db;
+pub mod schema;
+pub mod handlers;
+pub mod auth;
+pub mod models;
+pub mod dtos;
 
 use actix_web::{web, App, HttpServer, HttpResponse};
 use dotenvy::dotenv;
